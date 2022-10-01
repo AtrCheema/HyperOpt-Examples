@@ -22,10 +22,11 @@ from SeqMetrics import RegressionMetrics
 from ai4water import Model
 from ai4water.datasets import busan_beach
 from ai4water.models import LSTM
+from ai4water.utils.utils import get_version_info
 from ai4water.utils.utils import jsonize, dateandtime_now
 from ai4water.hyperopt import HyperOpt, Categorical, Real, Integer
 
-for k,v in Model._get_version_info().items():
+for k,v in get_version_info().items():
     print(f"{k} version: {v}")
 
 # %%

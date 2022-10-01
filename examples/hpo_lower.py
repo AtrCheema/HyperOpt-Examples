@@ -11,8 +11,7 @@ to instantiate the HyperOpt class and call the fit method on it.
 
 This example shows, how to use HyperOpt class for optimization of hyperparameters.
 """
-import site
-site.addsitedir("D:\\mytools\\AI4Water")
+
 import os
 import math
 
@@ -23,12 +22,13 @@ from SeqMetrics import RegressionMetrics
 
 from ai4water.functional import Model
 from ai4water.datasets import busan_beach
+from ai4water.utils.utils import get_version_info
 from ai4water.utils.utils import jsonize, dateandtime_now
 from ai4water.hyperopt import HyperOpt, Categorical, Real, Integer
 
 # sphinx_gallery_thumbnail_number = 2
 
-for k,v in Model._get_version_info().items():
+for k,v in get_version_info().items():
     print(f"{k} version: {v}")
 
 # %%

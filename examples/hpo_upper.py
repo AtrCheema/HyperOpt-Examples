@@ -3,15 +3,15 @@
 hyperparameter optimization with Model class
 ==============================================
 """
-import site
-site.addsitedir("D:\\mytools\\AI4Water")
+
 from ai4water.functional import Model
 from ai4water.datasets import busan_beach
+from ai4water.utils.utils import get_version_info
 from ai4water.hyperopt import Categorical, Real, Integer
 
 # %%
 
-for k,v in Model._get_version_info().items():
+for k,v in get_version_info().items():
     print(f"{k} version: {v}")
 
 # %%
